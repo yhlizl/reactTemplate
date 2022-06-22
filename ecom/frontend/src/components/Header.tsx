@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar,Nav,Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { LinkContainer } from 'react-router-bootstrap';
 export function Header() {
     
 
@@ -8,19 +9,28 @@ export function Header() {
         <>
             <header>
                 <Navbar bg = "dark" variant="dark" expand="lg" collapseOnSelect>
-                    <Navbar.Brand href ="/" />
-                        HomePage
+                    <LinkContainer to="/">
+                    <Navbar.Brand>            Pro Shop        </Navbar.Brand>
+
+                    </LinkContainer>
+
+                    
                     <Navbar.Toggle arial-controls="NAV" />
                     <Navbar.Collapse id= "NAV">
                             <Nav className="mr-auto">
-                                <Nav.Link href="#home">
+                            <LinkContainer to="/home">
+                                <Nav.Link >
                                 <i className="fa-solid fa-house-chimney"></i>
                                     Home
                                 </Nav.Link>
-                                <Nav.Link href="#login">
+                            </LinkContainer>
+
+                            <LinkContainer to="/login">
+                                <Nav.Link>
                                 <i className="fa-solid fa-arrow-right-from-bracket"></i>
                                     login
                                 </Nav.Link>
+                            </LinkContainer>
                             </Nav>
 
                     </Navbar.Collapse>

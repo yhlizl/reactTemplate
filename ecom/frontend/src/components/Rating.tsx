@@ -19,6 +19,7 @@ const Rating:React.FC<Props>=({value,text,color})=>{
             </span>
         ))
         }
+        <span>{text&&text}</span>
         </div>
         </React.Fragment>
     )
